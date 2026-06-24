@@ -113,6 +113,88 @@ export const anomalies = [
 // --- Experiments -------------------------------------------------------------
 export const experiments = [
   {
+    id: 'exp-220',
+    name: 'Guided setup wizard',
+    hypothesis:
+      'A guided, step-by-step wizard will lift activation versus the current empty-state dashboard new teams land on.',
+    status: 'planned',
+    owner: 'Marco T.',
+    metric: 'Activation Rate',
+    expectedLift: 8,
+    plannedStart: '2026-07-07',
+    audience: 'Planned: 50% of new teams',
+    mock: {
+      device: 'browser',
+      annotations: ['Replaces blank empty state', 'Progress + guidance', 'Search-as-you-type integrations'],
+      variants: [
+        {
+          label: 'Control',
+          caption: 'Empty-state dashboard today',
+          blocks: [
+            { type: 'header', text: 'Welcome to Agenda' },
+            { type: 'subhead', text: 'Connect a data source to begin' },
+            { type: 'image' },
+            { type: 'button', text: 'Connect data', variant: 'secondary' },
+          ],
+        },
+        {
+          label: 'Variant',
+          caption: 'Guided wizard',
+          blocks: [
+            { type: 'header', text: 'Let’s get you set up' },
+            { type: 'progress', value: 0.25, label: 'Step 1 of 4', highlight: true, note: 'guided' },
+            { type: 'callout', title: 'Step 1 — Connect your data', text: 'We’ll walk you through it' },
+            { type: 'input', placeholder: 'Search 40+ integrations…' },
+            { type: 'button', text: 'Next' },
+          ],
+        },
+      ],
+    },
+  },
+  {
+    id: 'exp-225',
+    name: 'Mobile anomaly push alerts',
+    hypothesis:
+      'Pushing explainable anomaly alerts to mobile will get teams investigating sooner and improve trust.',
+    status: 'planned',
+    owner: 'Priya N.',
+    metric: 'Anomaly response time',
+    expectedLift: 15,
+    plannedStart: '2026-07-14',
+    audience: 'Planned: opt-in beta',
+    mock: {
+      device: 'phone',
+      annotations: ['New push alert', 'One-tap to affected cohort', 'Post to team chat inline'],
+      variants: [
+        {
+          label: 'Control',
+          caption: 'Mobile home today',
+          blocks: [
+            { type: 'header', text: 'Agenda' },
+            { type: 'metric', value: '41.8%', label: 'Activation Rate' },
+            { type: 'bars' },
+          ],
+        },
+        {
+          label: 'Variant',
+          caption: 'Anomaly alert',
+          blocks: [
+            { type: 'header', text: 'Agenda' },
+            {
+              type: 'callout',
+              title: '⚠ Anomaly detected',
+              text: 'Activation dropped 11.7% in W20',
+              highlight: true,
+              note: 'alert',
+            },
+            { type: 'list', items: ['View affected cohort', 'See suspected cause', 'Post to team chat'] },
+            { type: 'button', text: 'Investigate' },
+          ],
+        },
+      ],
+    },
+  },
+  {
     id: 'exp-211',
     name: 'Insights panel on dashboard home',
     hypothesis:
@@ -125,6 +207,36 @@ export const experiments = [
     startDate: '2026-06-10',
     endDate: null,
     audience: '50% of active teams',
+    mock: {
+      device: 'browser',
+      annotations: ['New "This week" insights card', 'Sits above the fold', 'One-tap to drill in'],
+      variants: [
+        {
+          label: 'Control',
+          caption: 'Dashboard today',
+          blocks: [
+            { type: 'header', text: 'Dashboard' },
+            { type: 'bars' },
+            { type: 'text', lines: 3 },
+          ],
+        },
+        {
+          label: 'Variant',
+          caption: 'With insights panel',
+          blocks: [
+            { type: 'header', text: 'Dashboard' },
+            {
+              type: 'callout',
+              title: 'This week’s insights',
+              text: 'Activation up 6% · 2 anomalies flagged',
+              highlight: true,
+              note: 'new',
+            },
+            { type: 'bars' },
+          ],
+        },
+      ],
+    },
   },
   {
     id: 'exp-204',
@@ -139,6 +251,40 @@ export const experiments = [
     startDate: '2026-05-28',
     endDate: null,
     audience: '50% of new teams',
+    mock: {
+      device: 'browser',
+      annotations: ['6 steps → 3 steps', 'Inline progress', 'Single primary CTA'],
+      variants: [
+        {
+          label: 'Control',
+          caption: 'Current 6-step flow',
+          blocks: [
+            { type: 'header', text: 'Set up your workspace' },
+            { type: 'subhead', text: 'Step 1 of 6' },
+            { type: 'progress', value: 0.16 },
+            {
+              type: 'list',
+              items: ['Connect a data source', 'Invite a teammate', 'Create a goal', 'Add a metric', 'Set an alert', 'Explore insights'],
+            },
+            { type: 'button', text: 'Continue' },
+          ],
+        },
+        {
+          label: 'Variant',
+          caption: 'New 3-step flow',
+          blocks: [
+            { type: 'header', text: 'Set up in 3 steps' },
+            { type: 'subhead', text: 'Step 1 of 3' },
+            { type: 'progress', value: 0.33, highlight: true, note: '3 steps' },
+            {
+              type: 'list',
+              items: ['Connect data', 'Invite a teammate', 'Pick your first metric'],
+            },
+            { type: 'button', text: 'Get started' },
+          ],
+        },
+      ],
+    },
   },
   {
     id: 'exp-198',

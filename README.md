@@ -30,7 +30,7 @@ npm run preview  # preview the production build
 | Page | What it shows |
 | --- | --- |
 | **Overview** | Headline KPI + supporting metrics, week-over-week trend with anomalies marked, and an agent-flagged anomaly list. |
-| **Experiments** | Running and completed experiments with lift, confidence, owner, and win/loss results. |
+| **Experiments** | Planned, running, and completed experiments with lift, confidence, owner, and win/loss results. Click any row to open a detail view with the experiment's **UI mock** (control vs. variant) rendered as a wireframe. |
 | **Strategy** | Mission, strategy pillars with health/progress, and a hypotheses board tied to experiments. |
 | **Conversations** | Chat with the agent, a live Google Meet group-chat feed you can post to (including agent-drafted messages), and synced meeting notes with action items. |
 
@@ -78,6 +78,19 @@ src/
   lib/         # formatting helpers + useAsync hook
   pages/       # Overview, Experiments, Strategy, Conversations
 ```
+
+## UI mocks
+
+Each experiment can carry a `mock` field (see `mockData.js`) that's rendered by
+`src/components/Wireframe.jsx` — a small declarative renderer. A mock is a
+device frame (`browser` or `phone`) plus a list of `variants`, each a list of
+`blocks` (`header`, `progress`, `list`, `button`, `callout`, `metric`, …). No
+image assets to manage, and `highlight: true` on a block draws attention to
+what changed in the variant.
+
+If your design team would rather use real screenshots, swap the `<Block>`
+renderer in `Wireframe.jsx` for an `<img src={variant.image} />` and put image
+URLs in the data — the rest of the UI stays the same.
 
 ## Notes
 
