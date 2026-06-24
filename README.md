@@ -11,10 +11,11 @@ experience without any services.
 ## Stack
 
 - **React 18 + Vite** — fast SPA, no framework lock-in
-- **Tailwind CSS** — "Editorial Warm" theme (cream canvas, terracotta accent,
-  Fraunces serif headings). The look is driven almost entirely by the `brand`
-  (terracotta) and `slate` (warm stone) scales in `tailwind.config.js` — change
-  those two palettes to re-theme the whole app.
+- **Tailwind CSS** — Codecademy-style theme (warm cream canvas, electric-indigo
+  accent, navy-black text, Fraunces serif headings, chunky rounded cards). The
+  look is driven almost entirely by the `brand` (indigo) and `slate` (warm
+  paper / navy ink) scales in `tailwind.config.js` — change those two palettes
+  to re-theme the whole app.
 - **Recharts** — KPI trend chart
 - **lucide-react** — icons
 - **react-router-dom** — page routing

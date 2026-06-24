@@ -4,35 +4,34 @@ export default {
   theme: {
     extend: {
       colors: {
-        // --- Editorial Warm theme -------------------------------------------
-        // Accent: terracotta. Replaces the old blue "brand" scale, so every
-        // `brand-*` utility across the app becomes terracotta automatically.
+        // --- Codecademy-style theme -----------------------------------------
+        // Accent: electric indigo (Codecademy's signature CTA/link color).
+        // Replaces the old terracotta "brand" scale app-wide.
         brand: {
-          50: '#FBF1EC',
-          100: '#F8E3D8',
-          200: '#F0C6B0',
-          300: '#E5A183',
-          400: '#D97650',
-          500: '#C2410C',
-          600: '#AA380A',
-          700: '#8A2D08',
-          800: '#6E2507',
-          900: '#5A1F07',
+          50: '#EFEDFD',
+          100: '#DCD7FB',
+          200: '#BDB4F7',
+          300: '#9788F1',
+          400: '#6E57EA',
+          500: '#4F31E3',
+          600: '#3A10E5',
+          700: '#300CC0',
+          800: '#280A9C',
+          900: '#1F0A73',
         },
-        // Override the cool `slate` scale with a warm paper/stone scale. Every
-        // existing `slate-*` class (text, borders, backgrounds) shifts warm
-        // without touching component markup. 50 is the cream canvas; 900 ink.
+        // Codecademy pairs a warm cream canvas with cool navy-black text.
+        // Light shades stay warm (paper/borders); dark shades go navy (ink).
         slate: {
-          50: '#FAF7F2',
-          100: '#F2ECE3',
-          200: '#E7DFD3',
-          300: '#D8CEC0',
-          400: '#A89F90',
-          500: '#78716C',
-          600: '#57534E',
-          700: '#44403C',
-          800: '#292524',
-          900: '#1C1917',
+          50: '#F2F0EA',
+          100: '#ECEAE2',
+          200: '#DEDBD0',
+          300: '#CFCBBE',
+          400: '#9C988D',
+          500: '#6B6A66',
+          600: '#494A52',
+          700: '#33353F',
+          800: '#20222D',
+          900: '#14161F',
         },
       },
       fontFamily: {
@@ -51,8 +50,8 @@ export default {
         display: ['Fraunces', 'ui-serif', 'Georgia', 'Cambria', 'serif'],
       },
       boxShadow: {
-        // Softer, warmer card shadow than the cool default.
-        card: '0 1px 2px 0 rgb(28 25 23 / 0.04), 0 1px 3px 0 rgb(28 25 23 / 0.06)',
+        // Chunkier, friendlier card lift to match the Codecademy feel.
+        card: '0 1px 2px 0 rgb(20 22 31 / 0.04), 0 2px 10px 0 rgb(20 22 31 / 0.06)',
       },
     },
   },

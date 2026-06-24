@@ -23,7 +23,7 @@ export default function Modal({ open, onClose, title, subtitle, action, children
       onClick={onClose}
     >
       <div
-        className={`my-8 w-full ${maxWidth} rounded-xl border border-slate-200 bg-white shadow-xl`}
+        className={`my-8 w-full ${maxWidth} rounded-2xl border border-slate-200 bg-white shadow-xl`}
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-5 py-4">

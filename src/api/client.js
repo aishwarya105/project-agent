@@ -85,7 +85,7 @@ export async function postToGroupChat(text) {
   return {
     id: `m_${Date.now()}`,
     author: 'You',
-    avatarColor: '#9A3412',
+    avatarColor: '#3A10E5',
     text,
     time: new Date().toISOString(),
     postedViaAgent: true,
