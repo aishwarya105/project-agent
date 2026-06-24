@@ -77,7 +77,7 @@ function AgentChat({ seed, onPostToGroup }) {
                 <Sparkles className="h-4 w-4" />
               </span>
             ) : (
-              <Avatar name="Aishwarya R." color="#3A10E5" size={28} />
+              <Avatar name="Aishwarya R." color="#0E7C7B" size={28} />
             )}
             <div className={`max-w-[78%] ${m.role === 'user' ? 'items-end' : ''}`}>
               <div

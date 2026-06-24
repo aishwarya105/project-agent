@@ -4,8 +4,8 @@
 // shadow classes are written out in full (not interpolated) so Tailwind's JIT
 // can see them. Used as an accent on KPI/stat cards, not every card.
 const POP_VARIANTS = {
-  navy: 'border-2 border-slate-900 shadow-[4px_4px_0_0_#14161F] hover:shadow-[6px_6px_0_0_#14161F]',
-  brand: 'border-2 border-brand-600 shadow-[4px_4px_0_0_#3A10E5] hover:shadow-[6px_6px_0_0_#3A10E5]',
+  navy: 'border-2 border-slate-900 shadow-[4px_4px_0_0_#2B2A28] hover:shadow-[6px_6px_0_0_#2B2A28]',
+  brand: 'border-2 border-brand-600 shadow-[4px_4px_0_0_#0E7C7B] hover:shadow-[6px_6px_0_0_#0E7C7B]',
 }
 
 export function Card({ className = '', pop = false, popColor = 'navy', children, ...props }) {
