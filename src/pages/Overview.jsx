@@ -29,7 +29,7 @@ function KpiCard({ kpi }) {
   const towardTarget = (kpi.value / kpi.target) * 100
 
   return (
-    <Card className={kpi.isHeadline ? 'ring-1 ring-brand-200' : ''}>
+    <Card pop popColor={kpi.isHeadline ? 'brand' : 'navy'}>
       <CardBody>
         <div className="flex items-center justify-between">
           <span className="text-xs font-medium text-slate-500">{kpi.label}</span>

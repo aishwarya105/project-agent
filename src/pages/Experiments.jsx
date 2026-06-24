@@ -143,30 +143,30 @@ export default function Experiments() {
   return (
     <div className="space-y-6">
       <section className="grid grid-cols-2 gap-4 sm:grid-cols-4">
-        <Card>
+        <Card pop>
           <CardBody>
             <div className="flex items-center gap-2 text-xs text-slate-500">
               <Beaker className="h-4 w-4" /> Total
             </div>
-            <div className="mt-1 text-2xl font-semibold">{data.length}</div>
+            <div className="mt-1 font-display text-2xl font-semibold">{data.length}</div>
           </CardBody>
         </Card>
-        <Card>
+        <Card pop>
           <CardBody>
             <div className="text-xs text-slate-500">Planned</div>
-            <div className="mt-1 text-2xl font-semibold text-amber-600">{planned}</div>
+            <div className="mt-1 font-display text-2xl font-semibold text-amber-600">{planned}</div>
           </CardBody>
         </Card>
-        <Card>
+        <Card pop>
           <CardBody>
             <div className="text-xs text-slate-500">Running</div>
-            <div className="mt-1 text-2xl font-semibold text-sky-600">{running}</div>
+            <div className="mt-1 font-display text-2xl font-semibold text-sky-600">{running}</div>
           </CardBody>
         </Card>
-        <Card>
+        <Card pop>
           <CardBody>
             <div className="text-xs text-slate-500">Wins shipped</div>
-            <div className="mt-1 text-2xl font-semibold text-emerald-600">{wins}</div>
+            <div className="mt-1 font-display text-2xl font-semibold text-emerald-600">{wins}</div>
           </CardBody>
         </Card>
       </section>
