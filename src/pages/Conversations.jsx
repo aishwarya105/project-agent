@@ -77,7 +77,7 @@ function AgentChat({ seed, onPostToGroup }) {
                 <Sparkles className="h-4 w-4" />
               </span>
             ) : (
-              <Avatar name="Aishwarya R." color="#6366f1" size={28} />
+              <Avatar name="Aishwarya R." color="#9A3412" size={28} />
             )}
             <div className={`max-w-[78%] ${m.role === 'user' ? 'items-end' : ''}`}>
               <div
@@ -267,7 +267,7 @@ function MeetingNotes({ notes }) {
             <div className="mt-1 flex -space-x-1.5">
               {note.attendees.map((a) => (
                 <span key={a} className="ring-2 ring-white rounded-full">
-                  <Avatar name={a} color="#94a3b8" size={20} />
+                  <Avatar name={a} color="#A89F90" size={20} />
                 </span>
               ))}
             </div>

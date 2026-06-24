@@ -107,7 +107,7 @@ function ExperimentRow({ exp, onOpen }) {
 
       <div className="col-span-3 md:col-span-2">
         <div className="flex items-center gap-2">
-          <Avatar name={exp.owner} color="#64748b" size={24} />
+          <Avatar name={exp.owner} color="#78716C" size={24} />
           <div>
             <div className="text-xs font-medium text-slate-700">{exp.owner}</div>
             <div className="text-[11px] text-slate-400">

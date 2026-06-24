@@ -50,7 +50,7 @@ function PillarCard({ pillar }) {
           </div>
         </div>
         <div className="mt-3 flex items-center gap-2 border-t border-slate-100 pt-3">
-          <Avatar name={pillar.owner} color="#64748b" size={22} />
+          <Avatar name={pillar.owner} color="#78716C" size={22} />
           <span className="text-xs text-slate-500">Owned by {pillar.owner}</span>
         </div>
       </CardBody>
@@ -100,7 +100,7 @@ export default function Strategy() {
               Mission · {strategy.quarter}
             </span>
           </div>
-          <p className="mt-2 text-lg font-medium leading-snug text-slate-900">
+          <p className="mt-2 font-display text-xl font-medium leading-snug text-slate-900">
             {strategy.mission}
           </p>
         </CardBody>

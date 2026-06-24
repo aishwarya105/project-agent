@@ -42,7 +42,7 @@ export default function Topbar() {
           <span className="absolute right-1.5 top-1.5 h-2 w-2 rounded-full bg-rose-500 ring-2 ring-white" />
         </button>
         <button className="flex items-center gap-2 rounded-lg border border-slate-200 py-1 pl-1 pr-2 hover:bg-slate-50">
-          <Avatar name="Aishwarya R." color="#6366f1" size={28} />
+          <Avatar name="Aishwarya R." color="#9A3412" size={28} />
           <ChevronDown className="h-4 w-4 text-slate-400" />
         </button>
       </div>

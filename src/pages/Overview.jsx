@@ -36,7 +36,7 @@ function KpiCard({ kpi }) {
           {kpi.isHeadline && <Badge tone="brand">Headline</Badge>}
         </div>
         <div className="mt-2 flex items-baseline gap-2">
-          <span className="text-2xl font-semibold tracking-tight text-slate-900">
+          <span className="font-display text-2xl font-semibold tracking-tight text-slate-900">
             {formatValue(kpi.value, kpi.unit)}
           </span>
           <span
@@ -116,19 +116,19 @@ export default function Overview() {
                 <AreaChart data={headlineTrend} margin={{ top: 8, right: 8, left: -16, bottom: 0 }}>
                   <defs>
                     <linearGradient id="fill" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="0%" stopColor="#3366ff" stopOpacity={0.25} />
-                      <stop offset="100%" stopColor="#3366ff" stopOpacity={0} />
+                      <stop offset="0%" stopColor="#C2410C" stopOpacity={0.22} />
+                      <stop offset="100%" stopColor="#C2410C" stopOpacity={0} />
                     </linearGradient>
                   </defs>
-                  <CartesianGrid strokeDasharray="3 3" stroke="#eef2f7" vertical={false} />
+                  <CartesianGrid strokeDasharray="3 3" stroke="#EFEAE1" vertical={false} />
                   <XAxis
                     dataKey="week"
-                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                    tick={{ fontSize: 12, fill: '#A89F90' }}
                     axisLine={false}
                     tickLine={false}
                   />
                   <YAxis
-                    tick={{ fontSize: 12, fill: '#94a3b8' }}
+                    tick={{ fontSize: 12, fill: '#A89F90' }}
                     axisLine={false}
                     tickLine={false}
                     domain={['dataMin - 3', 'dataMax + 3']}
@@ -137,7 +137,7 @@ export default function Overview() {
                   <Area
                     type="monotone"
                     dataKey="value"
-                    stroke="#3366ff"
+                    stroke="#C2410C"
                     strokeWidth={2.5}
                     fill="url(#fill)"
                   />

@@ -39,7 +39,7 @@ export default function ExperimentDetail({ exp }) {
         <Field label="Primary metric">{exp.metric}</Field>
         <Field label="Owner">
           <span className="flex items-center gap-1.5">
-            <Avatar name={exp.owner} color="#64748b" size={20} />
+            <Avatar name={exp.owner} color="#78716C" size={20} />
             {exp.owner}
           </span>
         </Field>

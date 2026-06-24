@@ -17,17 +17,27 @@ body {
   font-feature-settings: 'cv11', 'ss01';
 }
 
+/* Editorial Warm: headings carry the Fraunces serif. */
+@layer base {
+  h1,
+  h2,
+  h3,
+  h4 {
+    @apply font-display;
+  }
+}
+
 /* Thin, unobtrusive scrollbars to match the clean aesthetic */
 * {
   scrollbar-width: thin;
-  scrollbar-color: #cbd5e1 transparent;
+  scrollbar-color: #d8cec0 transparent;
 }
 *::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 *::-webkit-scrollbar-thumb {
-  background-color: #cbd5e1;
+  background-color: #d8cec0;
   border-radius: 9999px;
 }
 *::-webkit-scrollbar-track {
